@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Ich wünsche dir alles alles Liebe und Gute zum Geburtstag❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      background: #e63956;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: float 5s linear infinite;
+      color: #ff4d6d;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Ich wünsche dir alles alles Liebe und Gute zum Geburtstag mein Schatz❤️</h1>
+    <p>
+      Auch wenn du schon weißt was du zum Geburtstag bekommst, sollst du wissen, dass es von Herzen kommt und ich hoffe es gefällt dir😘
+    </p>
+
+    <button onclick="showMessage()">Drück da drauf Biebi🥲😘</button>
+
+    <p id="message" class="hidden">
+      Ich weiß, dass es anfangs nicht leicht mit mir war und bin deshalb umso froher, dass du uns nicht direkt aufgegeben hast. Du bist das Beste, was mir passiert ist. Auch wenn du es vielleicht gar nicht so krass siehst, hast du mich zu einem Menschen gemacht, der ich lange nicht war, aber die ganze Zeit sein wollte, da du so viele Dinge von mir ins positive geändert hast. Ich bin unendlich dankbar einen Menschen wie dich an meiner Seite zu haben und es gibt keinen Menschen, mit dem ich mir besser eine gemeinsame Zukunft vorstellen könnte. Ich liebe dich über alles Biebimaus❤️❤️❤️
+
+Ich hoffe du hast einen tollen Geburtstag❤️😘 
+      <br><br>
+        
+      <br><br>
+      ❤️Dein Biebibär❤️
+    </p>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").classList.remove("hidden");
+      createHearts();
+    }
+
+    function createHearts() {
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+    }
+  </script>
+
+</body>
+</html>
